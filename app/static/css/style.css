@@ -1,0 +1,143 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  font-family: "Lucida Grande", "Source Sans Pro", "Lucida Sans Unicode", Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-family: Sans-Serif;
+}
+
+.pro-form {
+  width: 500px;
+  border-radius: 20px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2OGFkMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzU5YzFkNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #268ad0), color-stop(100%, #59c1d4));
+  background: -moz-linear-gradient(#268ad0, #59c1d4);
+  background: -webkit-linear-gradient(#268ad0, #59c1d4);
+  background: linear-gradient(#268ad0, #59c1d4);
+  padding: 2px 20px 20px 20px;
+}
+
+.pro-form .field {
+  margin: 0 0 10px 0;
+}
+
+.pro-form .field input[type=text], .pro-form .field input[type=number] {
+  width: 100%;
+}
+
+#card_zip {
+  width: 50%;
+}
+
+#card_code {
+  width: 30%;
+}
+
+#card_address_2 {
+  margin-top: 3px;
+}
+
+.actions {
+  margin-top: 25px;
+}
+
+.actions .button {
+  display: block;
+  width: 100%;
+  float: none;
+  text-align: center;
+  font-size: 120%;
+}
+
+/*input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}*/
+
+/*input[type='text'],
+input[type='number'] {
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #ffffff));
+  background: -moz-linear-gradient(#cccccc, #ffffff);
+  background: -webkit-linear-gradient(#cccccc, #ffffff);
+  background: linear-gradient(#cccccc, #ffffff);
+  padding: 4px 20px 4px 5px;
+  outline: 0;
+  border: 0;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}*/
+
+/*input[type='text']:focus,
+input[type='number']:focus {
+  background: white;
+}*/
+
+.button {
+  float: left;
+  border: 0;
+  padding: 12px 16px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMyMzIzMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI3MjcyNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #323232), color-stop(100%, #272727));
+  background: -moz-linear-gradient(#323232, #272727);
+  background: -webkit-linear-gradient(#323232, #272727);
+  background: linear-gradient(#323232, #272727);
+  box-shadow: inset 0 1px 0 #3c3c3c;
+  border-radius: 5px;
+  border: 1px solid #111;
+  color: white !important;
+  font-size: 16px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.button:hover, .button:focus, .button.gsc-cursor-current-page {
+  background: #333;
+  text-decoration: none !important;
+  -moz-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover strong, .button:focus strong, .button.gsc-cursor-current-page strong {
+  background: #999;
+  color: black;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+  box-shadow: none;
+}
+
+.button.active {
+  background: black;
+}
+
+.button a {
+  color: white;
+}
+
+.progress-wrap {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.progress-wrap progress {
+  width: 100%;
+  margin: 0 0 5px 0;
+}

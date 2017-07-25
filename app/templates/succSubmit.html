@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/2.3.2/examples/signin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>{{name}} Submitted!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=778777158891878";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+      <form class="form-signin" action="/home/" method="POST">
+        <h2 class="form-signin-heading">Success! You Submitted A Form</h2>
+        <hr>
+        <h3>Survey Link</h3>
+        <hr>
+        <a href="{{link}}">{{link}}</a>
+        <!-- SHARING STUFF -->
+        <h3>Share</h3>
+        <hr>
+                        <!-- Print Share -- >
+                    
+                        <!-- Email Share -->
+                            <a style="text-decoration: none;" href="mailto:?subject=Check out this Survey!&body=Check out this Survey: {{link}}"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                            <br><br>
+                        <!-- Facebook Share -->
+                            <div class="fb-share-button" data-href="{{link}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fabirshukla.pythonanywhere.com%2F&amp;src=sdkpreparse">Share</a></div>
+                      <br/>
+                      <br/>     
+                      <!-- Twitter Share -->
+                      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{link}}">
+Tweet</a>
+<h3>Survey Details</h3>
+<hr>
+{% if creator !="" %}
+<p><b>Creator</b>: {{creator}}</p>
+<p><b>Creator Contact Info</b>: <a href="mailto:{{creatorContact}}?Subject=I submitted your survey {{name}}" target="_top">{{creatorContact}}</a></p>
+
+{% endif %}
+
+{% if email =="h" %}
+
+
+{% endif %}
+<hr>
+
+{% if email !="noemail." %}
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="code" value="chini">
+ {% endif %}
+ <button class="btn btn-large btn-primary" type="submit">Back to Pecan Home</button>
+ <br><br>
+ {% if email == "noemail." %}
+ <a href="/signUp/">Create a Pecan Account!</a><br/><br/>
+<a href="/">Login</a>    
+  {% endif %}
+  </form>    
+</div> <!-- /container -->
+
+
+  
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</body></html>

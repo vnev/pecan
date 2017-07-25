@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Log in | Pecan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/stylesheet.css') }}" rel="stylesheet">
+
+  <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Log in to Pecan</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="wall">
+            <form class="frm" action="/" method="POST">
+                <p style="color: {{color}};">{{mess}}</p>
+                <div class="form-group label-floating">
+                  <label class="control-label" for="emailBox">Email</label>
+                  <input type="email" class="form-control" id="emailBox" name="email">
+                </div>
+                <br>
+
+                <div class="form-group label-floating">
+                  <label class="control-label" for="passwdBox">Password</label>
+                  <input type="password" class="form-control" id="passwdBox" name="passW">
+                </div>
+                <br>
+                
+                <button class="btn btn-raised btn-primary" type="submit">Log In</button>
+                <br><br>
+                <a href="/signUp/">Don't have an account? Sign up!</a>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div> <!-- /container -->
+</body>
+</html>

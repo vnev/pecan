@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/2.3.2/examples/signin.html -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Sign in Pecan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/stylesheet.css') }}" rel="stylesheet">
+
+  <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+  <div class="container">
+  <h3>Account Manager for {{fullName}}</h3>
+        <hr>
+
+  <form action="/addMailingList/" method="POST">
+      <div class="form-group">
+        
+        <input type="hidden" class="form-control" placeholder="Email addresses seperated by commas" autocomplete="off" name="email" value="{{email}}">
+        <label for="passwd">Add emails to mailing List</label>
+        <input type="text" id="email" class="form-control" placeholder="Email addresses seperated by commas" autocomplete="off" name="emailList">
+        <br/>
+        <input type="text" id="nameEmail" class="form-control" placeholder="Name of Mailing List" autocomplete="off" name="nameOfList">
+        <br/>
+        <input class="btn btn-large btn-primary" type="submit" value="Add to/Create Mailing List">
+      </div>
+    </form>
+    <br/><br/>
+
+    <form action="/deleteAccount/" method="POST">
+      <div class="form-group">
+        
+        <input type="hidden" class="form-control" placeholder="Email address" autocomplete="off" name="email" value="{{email}}">
+        <label for="passwd">Enter password to delete account</label>
+        <input type="password" id="passwd" class="form-control" placeholder="Password" autocomplete="off" name="passW">
+        <br/>
+        <input class="btn btn-large btn-danger" type="submit" value="Delete My Account">
+      </div>
+    </form>
+
+  </div> <!-- /container -->
+</body>
+</html>

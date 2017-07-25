@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/2.3.2/examples/signin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Pecan</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" action="/survey/{{name}}/response/" method="POST">
+      <center>{{name}}</center>
+        <hr>
+        <br/>
+        
+        {% for q in questions %}
+          <p> Question {{questions.index(q)+1}}: {{q}}
+          <input type="text" class="input-block-level" placeholder="Enter Question {{questions.index(q)+1}}" autocomplete="off" name="q{{questions.index(q)}}">
+          </p><br/>
+        {% endfor %}
+      <input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="length" value="{{length}}">
+
+      <input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+
+        <input class="btn btn-large btn-primary" type="submit" value="Submit Form">
+      </form>
+    </div> <!-- /container -->
+
+
+  
+
+</body></html>

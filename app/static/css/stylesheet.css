@@ -1,0 +1,19 @@
+#survey-name {
+	font-family: "Roboto", sans-serif;
+	font-weight: bolder;
+}
+
+#submit-button:hover {
+	transition: background 0.3s;
+}
+
+#submit-button {
+	transition: background 0.3s;
+}
+
+label {
+	font-size: 1.0em;
+}
+
+.carousel img {
+}

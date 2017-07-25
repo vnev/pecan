@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Sign in | Pecan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/stylesheet.css') }}" rel="stylesheet">
+  
+  <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+  <body>
+    <div class="container">
+      <h2>Welcome, {{first_name}}!</h2>
+      <hr>
+      <!-- <br/> -->
+      <form action="/addSurvey/" method="POST">
+        <div class="form-group">
+          <input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+          <div class="row">
+            <input class="col-sm-3 btn btn-lg btn-warning" type="submit" value="Create A New Survey">
+          </div>
+        </div>
+        <!-- <br> -->
+      </form>
+
+      <form action="/manage/" method="POST">
+        <div class="form-group">
+          <input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+          <div class="row">
+            <input class="col-sm-3 btn btn-lg btn-primary" type="submit" value="Manage Account">
+          </div>
+        </div>
+      </form>
+
+       <form action="/surveyWall/" method="POST">
+        <div class="form-group">
+          <input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+          <div class="row">
+          <p>
+            <input class="col-sm-3 btn btn-lg btn-primary" type="submit" value="Survey Wall">
+               <br/>
+               <br/>
+               <br/> 
+               <span style="color:green">{{numNew}} new Surveys, {{numClosed}} Surveys about to close
+               </span>
+            </p>
+          </div>
+        </div>
+        <!-- <br> -->
+      </form>
+
+      </div>
+      <!-- <br/><br/><br/> -->
+      <br>
+      <div class="row">
+<div class="col-md-12">
+<center>
+<h3>Created Surveys</h3>
+
+<hr>
+</center>
+<div class="container">
+      {% for link in createdLinks %}
+
+      <form id="my_form{{createdLinks.index(link)}}" action="/surveyDetails/" method="POST">
+
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+<input type="hidden" class="form-control" placeholder="surveyName" autocomplete="off" name="surveyName" value="{{createdLinksName[createdLinks.index(link)]}}">
+
+            <a href="javascript:{}" onclick="document.getElementById('my_form{{createdLinks.index(link)}}').submit();">
+            {{createdLinksName[createdLinks.index(link)]}}</a>
+        </form>
+
+<br/>
+      {% endfor %}
+
+</div>
+
+</div>
+
+
+
+    </div> <!-- /container -->
+</body>
+</html>

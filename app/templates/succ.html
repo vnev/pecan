@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/2.3.2/examples/signin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>{{formName}} Created!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=778777158891878";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+      <form class="form-signin" action="/home/" method="POST">
+        <h2>Success! You Created A Survey</h2>
+        <hr>
+        <h3>Form Link</h3>
+        <hr>
+        <!-- <hr> -->
+        <p><a href="{{link}}">{{link}}</a>
+        <!-- SHARING STUFF -->
+        <h3>Share</h3>
+        <hr>
+        <!-- <hr> -->
+                        <!-- Print Share -- >
+                    
+                        <!-- Email Share -->
+
+                            <a style="text-decoration: none;" href="mailto:?subject=Check out My Survey!&body=Check out My Survey: {{link}}"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                        <!-- Facebook Share -->
+                            <br><br>
+                            <div class="fb-share-button" data-href="{{link}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fabirshukla.pythonanywhere.com%2F&amp;src=sdkpreparse">Share</a></div>
+                      <!-- <br><br> -->
+                      <!-- Twitter Share -->
+                      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{link}}">
+Tweet</a>
+<hr>
+
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="code" value="chini">
+
+
+
+        <center><button class="btn btn-large btn-primary" type="submit">Back to Pecan Home</button></center>
+
+        
+      </form>
+      <br/>
+    
+ <form class="form-signin" action="/emailFormCreated/" method="POST">
+   <p style="color:green">{{message}}</p>
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="email" value="{{email}}">
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="link" value="{{link}}">
+<input type="hidden" class="form-control" placeholder="Email" autocomplete="off" name="formName" value="{{formName}}">
+ <input type="test" class="form-control" placeholder="Enter Email(s) of People To Send To" id="emails" name="emailReps">
+
+        <br>
+        <center><button class="btn btn-large btn-primary" type="submit">Send Emails</button></center>
+</form>
+    
+    </div> <!-- /container -->
+
+
+  
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+</body></html>
